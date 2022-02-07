@@ -3,7 +3,7 @@ const username = "nxmxgoldxx";
 const repoList = document.querySelector(".repo-list");
 
 const gitUserInfo = async function () {
-    const userInfo = await fetch('https://api.github.com/users/${username}');
+    const userInfo = await fetch(`https://api.github.com/users/${username}`);
     const data = await userInfo.json();
     displayUserInfo(data);
 };
