@@ -66,6 +66,8 @@ for (const language in languageData) {
     languages.push(language)
 }
 
+displayRepoInfo(repoInfo, languages);
+
 const displayRepoInfo = function (repoInfo, languages) {
     repoData.innerHTML = "";
     repoData.classList.remove("hide");
@@ -74,9 +76,9 @@ const displayRepoInfo = function (repoInfo, languages) {
     div.innerHTML = `
     <h3>Name: ${repoInfo.name}</h3>
     <p>Description: ${repoInfo.description}</p>
-    <p>Default Branch: ${repoInfo.defaultBranch}</p>
+    <p>Default Branch: ${repoInfo.default_branch}</p>
     <p>Languages: ${languages.join(", ")}</p>
-    <a class="visit" href="${repoInfo.html_url}" target="blank" rel="noreferrer noopener">View Repository on GitHub!</a>
+    <a class="visit" href="${repoInfo.html_url}" target="_blank" rel="noreferrer noopener">View Repository on GitHub!</a>
     `;
     repoData.append(div);
 
