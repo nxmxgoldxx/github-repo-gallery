@@ -61,7 +61,8 @@ const getRepoInfo = async function (repoName) {
     const repoInfo = await fetchInfo.json();
     console.log(repoInfo);
 
-    
+// Get Languages
+
 const fetchLanguages = await fetch(repoInfo.languages_url);
 const languageData = await fetchLanguages.json();
 
@@ -95,6 +96,7 @@ viewReposButton.addEventListener("click", function () {
 
 });
 
+
 //Dynamic Search Bar
 
 filterInput.addEventListener("input", function (e) {
@@ -112,4 +114,6 @@ filterInput.addEventListener("input", function (e) {
     }
 });
 
-}
+
+
+};
